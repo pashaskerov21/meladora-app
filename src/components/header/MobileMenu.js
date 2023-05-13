@@ -1,6 +1,6 @@
 import React from 'react'
 import { Offcanvas } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { headerLinkArr } from './HeaderLink'
 
 
@@ -20,7 +20,7 @@ function MobileMenu(props) {
                 <div className='offcanvas-links'>
                     {
                         headerLinkArr.map(link => (
-                            <Link key={link.id} to={link.path}>{link.label}</Link>
+                            <NavLink key={link.id} to={link.path}>{link.label}</NavLink>
                         ))
                     }
                 </div>

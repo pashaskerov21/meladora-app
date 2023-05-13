@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { headerLinkArr } from './HeaderLink'
 
 function GeneralNav(props) {
@@ -15,7 +15,7 @@ function GeneralNav(props) {
                         <div className="nav-links">
                             {
                                 headerLinkArr.map(link => (
-                                    <Link key={link.id} to={link.path}>{link.label}</Link>
+                                    <NavLink key={link.id} to={link.path}>{link.label}</NavLink>
                                 ))
                             }
                         </div>

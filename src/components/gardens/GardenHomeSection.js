@@ -2,7 +2,7 @@ import React from 'react'
 import SectionTitle from '../title/SectionTitle'
 import { gardenArr } from './GardenContent'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import { Link } from 'react-router-dom';
 
 function GardenHomeSection() {
@@ -30,7 +30,7 @@ function GardenHomeSection() {
                             slidesPerView: 3,
                         },
                     }}
-                    modules={[Pagination]}
+                    modules={[Pagination,Autoplay]}
                 >
                     {
                         gardenArr.map(garden => (

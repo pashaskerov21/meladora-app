@@ -1,14 +1,16 @@
 header {
-    
+
     --header-color: #212529;
-    
+
     width: 100%;
     position: relative;
     z-index: 999;
-    i{
+
+    i {
         color: var(--color-1);
         font-size: 20px;
     }
+
     &.home {
         --header-color: #fff;
 
@@ -16,13 +18,15 @@ header {
         height: 100%;
         max-height: 85vh;
         margin-bottom: 150px;
-        .home-header-bg{
+
+        .home-header-bg {
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -31,74 +35,94 @@ header {
                 height: 100%;
                 background-color: var(--black-6);
             }
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
         }
     }
-    nav{
+
+    nav {
         width: 100%;
         position: relative;
-        &.fixed-top{
+
+        &.fixed-top {
             --header-color: #fff;
             background-color: var(--color-2);
         }
-        .container{
+
+        .container {
             @include column-center;
-            .inner{
+
+            .inner {
                 width: 100%;
                 padding: 15px 0;
                 @include row-between;
             }
         }
-        &.top-nav{
-            .inner{
+
+        &.top-nav {
+            .inner {
                 border-bottom: 2px solid var(--header-color);
             }
-            .phone{
+
+            .phone {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                i{
+
+                i {
                     margin-right: 10px;
                 }
-                span{
+
+                span {
                     color: var(--header-color);
                 }
             }
         }
     }
-    .sosial-icons{
-        a{
-            &:hover{
-                i{
+
+    .sosial-icons {
+        a {
+            &:hover {
+                i {
                     color: var(--header-color);
                 }
             }
         }
     }
+
     .menu-button,
-    .search-button{
-        i{
+    .search-button {
+        i {
             font-size: 28px;
         }
     }
-    .right{
+
+    .right {
         @include row-justify-end;
     }
-    .nav-links{
+
+    .nav-links {
         @include row-center;
         margin-right: 20px;
-        a{
+
+        a {
             color: var(--header-color);
             font-size: 15px;
             font-weight: 600;
             padding: 10px 15px;
             border-radius: 5px;
             margin-right: 5px;
-            &:hover{
+
+            &:hover {
+                background-color: var(--color-1);
+                color: #fff;
+            }
+
+            &.active {
                 background-color: var(--color-1);
                 color: #fff;
             }
@@ -106,47 +130,61 @@ header {
     }
 }
 
-.sosial-icons{
+.sosial-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    a{
+
+    a {
         color: var(--color-1);
         font-size: 20px;
         margin-right: 15px;
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
         }
-        &:hover{
+
+        &:hover {
             color: var(--header-color);
         }
     }
 }
 
-.mobile-menu{
+.mobile-menu {
     --menu-bg-color: #fff;
-    &.home{
-        --menu-bg-color: var(--color-2); 
-    }
-    &.black-bg{
+
+    &.home {
         --menu-bg-color: var(--color-2);
     }
+
+    &.black-bg {
+        --menu-bg-color: var(--color-2);
+    }
+
     background-color: var(--menu-bg-color);
-    .close-button{
+
+    .close-button {
         color: var(--color-1);
         font-size: 30px;
     }
-    .offcanvas-links{
+
+    .offcanvas-links {
         width: 100%;
         @include column-align-start;
         margin-top: 30px;
-        a{
+
+        a {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             color: var(--color-1);
-            &:hover{
+
+            &:hover {
+                background-color: var(--color-1);
+                color: #fff;
+            }
+            &.active {
                 background-color: var(--color-1);
                 color: #fff;
             }
@@ -154,58 +192,72 @@ header {
     }
 }
 
-.search-offcanvas{
+.search-offcanvas {
     --search-bg-color: #fff;
-    &.home{
+
+    &.home {
         --search-bg-color: var(--color-2);
     }
-    &.black-bg{
+
+    &.black-bg {
         --search-bg-color: var(--color-2);
     }
+
     background-color: var(--search-bg-color);
-    .offcanvas-body{
+
+    .offcanvas-body {
         padding: 0;
         @include row-center;
-        .container{
+
+        .container {
             @include row-center;
-            .col-10,.col-2{
+
+            .col-10,
+            .col-2 {
                 @include row-center;
             }
         }
     }
-    .close-button{
+
+    .close-button {
         min-width: 40px;
         min-height: 40px;
         border-radius: 50%;
         border: 1px solid var(--color-1);
         color: var(--color-1);
         font-size: 24px;
-        &:hover{
+
+        &:hover {
             background-color: var(--color-1);
             color: #fff;
         }
     }
-    form{
+
+    form {
         position: relative;
         width: 100%;
-        input{
+
+        input {
             background-color: transparent;
             border-color: var(--color-1);
             box-shadow: none;
             padding: 15px;
-            &::placeholder{
+
+            &::placeholder {
                 color: var(--color-1);
             }
-            &:focus{
+
+            &:focus {
                 box-shadow: none;
                 border-color: var(--color-1);
                 background-color: transparent;
                 caret-color: var(--color-1);
                 color: var(--color-1);
-                
+
             }
         }
-        button{
+
+        button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);

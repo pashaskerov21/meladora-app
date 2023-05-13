@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal'
+import { Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 Modal.setAppElement('#root');
@@ -48,6 +49,8 @@ function ProductModal({ modalIsOpen, closeModal, selectedProduct }) {
                                                 slidesPerView: 3,
                                             },
                                         }}
+                                        navigation={true}
+                                        modules={[Autoplay,Navigation]}
                                     >
                                         {
                                             selectedProduct && selectedProduct.productGallery.map((img, index) => (

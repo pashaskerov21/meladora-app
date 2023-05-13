@@ -7,7 +7,7 @@ import image_4 from '../../image/garden/g4-img.png'
 import image_5 from '../../image/garden/g5-img.png'
 import image_6 from '../../image/garden/g6-img.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper'
+import { Autoplay, Pagination } from 'swiper'
 
 const blogArr = [
     {
@@ -72,7 +72,7 @@ function BlogSection() {
                             slidesPerView: 3,
                         },
                     }}
-                    modules={[Pagination]}>
+                    modules={[Pagination,Autoplay]}>
                     {
                         blogArr.map(blog => (
                             <SwiperSlide key={blog.id}>
