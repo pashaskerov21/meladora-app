@@ -1,0 +1,44 @@
+section.services {
+    .col-12{
+        @include row-center;
+    }
+    .service-card {
+        width: 100%;
+        max-width: 500px;
+        @include column-align-start;
+        .icon{
+            margin-bottom: 20px;
+        }
+        .title{
+            color: darkgreen;
+            margin-bottom: 25px;
+        }
+        .text{
+            color: var(--black-8);
+        }
+    }
+    .service-container{
+        width: 100%;
+        @include column-center;
+        .service-img{
+            width: 100%;
+            max-width: 500px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px){
+    section.services{
+        .service-container{
+            .row{
+                &:nth-child(even){
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}

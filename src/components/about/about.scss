@@ -1,0 +1,74 @@
+section.about-home {
+    @include row-center;
+    .text-design{
+        position: absolute;
+        width: 90%;
+        max-width: 360px;
+        top: 50%;
+        left: 10px;
+    }
+    .col-12 {
+        padding: 0;
+        position: relative;
+    }
+
+    .about-bg {
+        width: 100%;
+        min-height: 60vh;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .about-col{
+        background-color: #F5F5F5;
+        padding: 15px;
+    }
+    .content{
+        width: 100%;
+        @include column-center;
+    }
+    .text{
+        text-align: center;
+        max-width: 800px;
+        padding: 0 15px;
+        .text-design-2{
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+    }
+    .about-icons{
+        width: 100%;
+        max-width: 600px;
+        @include column-center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        .item{
+            @include column-center;
+            margin: 15px;
+            img{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px){
+    section.about-home{
+        .about-icons{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+@media only screen and (min-width: 992px) {
+    section.about-home {
+        .row {
+            flex-direction: row-reverse;
+        }
+        .about-bg{
+            min-height: 80vh;
+        }
+    }
+}
