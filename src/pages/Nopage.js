@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from './Layout'
+import SectionTitle from '../components/title/SectionTitle'
 
 function Nopage() {
   return (
     <Layout>
-      Page Not Found
+      <section>
+        <div className="container">
+          <SectionTitle title='Səhifə Tapılmadı'/>
+        </div>
+      </section>
     </Layout>
   )
 }
